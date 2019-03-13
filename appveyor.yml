@@ -13,6 +13,6 @@ build:
   project: straight_skeleton\StraightSkeletonNet.sln.sln
   verbosity: minimal
 
-# test_script:
-# - cmd: >-
-#    dotnet test --logger:Appveyor straight_skeleton\StraightSkeletonNet.Tests\StraightSkeletonNet.Tests.csproj -c Release
+test_script:
+- cmd: >-
+   dotnet test --logger:Appveyor straight_skeleton\StraightSkeletonNet.Tests\StraightSkeletonNet.Tests.csproj -c Release
