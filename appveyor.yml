@@ -1,0 +1,18 @@
+image: Visual Studio 2017
+
+configuration: Release
+platform: AnyCPU
+
+cache:
+  - packages -> **\packages.config      # preserve "packages" directory in the root of build folder but will reset it if packages.config is modified
+
+before_build:
+  - nuget restore
+
+build:
+  project: straight_skeleton\StraightSkeletonNet.sln.sln
+  verbosity: minimal
+
+# test_script:
+# - cmd: >-
+#    dotnet test --logger:Appveyor straight_skeleton\StraightSkeletonNet.Tests\StraightSkeletonNet.Tests.csproj -c Release
